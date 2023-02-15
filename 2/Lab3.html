@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+<head>
+      <title>Задание 3</title>
+<style>
+#nlo { 
+	position: relative;
+	
+}
+</style>
+</head>
+<img id="nlo" width="240" height="159" src="https://avatars.mds.yandex.net/i?id=2acc45309c3d7ae9e6490c56b6923c767cd5c261-8427413-images-thumbs&n=13" >
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).on('keydown', function(e) {
+  switch (e.key) {
+
+    // перемещение влево
+    case "ArrowLeft":
+      $('#nlo').animate({
+        left: "-=100px"
+      }, 'fast');
+      break;
+      // перемещение вверх
+    case "ArrowUp":
+      $('#nlo').animate({
+        top: "-=100px"
+      }, 'fast');
+      break;
+      // перемещение вправо
+    case "ArrowRight":
+      $('#nlo').animate({
+        left: "+=100px"
+      }, 'fast');
+      break;
+      // перемещение вниз
+    case "ArrowDown":
+      $('#nlo').animate({
+        top: "+=100px"
+      }, 'fast');
+      break;
+  }
+});
+</script>
