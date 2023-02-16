@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="shortcut icon" href="logoAVIA.png" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+	<title>Авиарейсы</title>
+	<header class="head">
+	    <img class="al" height="120" width="240" src="logoAVIA.png">
+        <a class="ac" align="center" href="#"><br>Авиарейсы</a>
+	</header>
+</head>
+<body>
+<main class="main">
+
+	<div class="content_box">
+		<div class="main_title">
+			Выберите направление
+		</div>
+
+		<div class="container content" id="acc_con">
+	<div class="stage" id="accordion">
+		<h3>В Москву</h3>
+		<div>
+			<h2>Авиабилеты в Москву</h2>
+			<p>Авиасейлс сравнивает цены на авиабилеты в Москву и обратно по 728 авиакомпаниям и сотням мировых тревелсайтов. Мы находим самые дешевые билеты на самолет в Москву без наценки и комиссии.
+			<p>Наибольшей популярностью билеты в Москву пользуются в июле, августе и сентябре. Низким сезоном для покупки билетов является Февраль, Март и Апрель...<a href=""> Читать дальше</a></div>
+
+		<h3>В Санкт-Петербург</h3>
+		<div>
+			<h2>Авиабилеты в Санкт-Петербург</h2>
+			<p>Авиасейлс сравнивает цены на авиабилеты в Санкт-Петербург и обратно по 728 авиакомпаниям и сотням мировых тревелсайтов. Мы находим самые дешевые билеты на самолет в Санкт-Петербург без наценки и комиссии.
+			<p>Наибольшей популярностью билеты в Санкт-Петербург пользуются в июле, августе и сентябре. Низким сезоном для покупки билетов является Февраль, Март и Апрель...<a href=""> Читать дальше</a></div>
+		<h3>В Уфу</h3>
+		<div>
+			<h2>Авиабилеты в Уфу</h2>
+			<p>Авиасейлс сравнивает цены на авиабилеты в Уфу и обратно по 728 авиакомпаниям и сотням мировых тревелсайтов. Мы находим самые дешевые билеты на самолет в Уфу без наценки и комиссии.
+			<p>Наибольшей популярностью билеты в Уфу пользуются в июле, августе и сентябре. Низким сезоном для покупки билетов является Февраль, Март и Апрель...<a href=""> Читать дальше</a></div>
+		<h3>В Самару</h3>
+		<div>
+			<h2>Авиабилеты в Самару</h2>
+			<p>Авиасейлс сравнивает цены на авиабилеты в Самару и обратно по 728 авиакомпаниям и сотням мировых тревелсайтов. Мы находим самые дешевые билеты на самолет в Самару без наценки и комиссии.
+			<p>Наибольшей популярностью билеты в Самару пользуются в июле, августе и сентябре. Низким сезоном для покупки билетов является Февраль, Март и Апрель...<a href=""> Читать дальше</a></div>
+	    <h3>В Ижевск</h3>
+		<div>
+			<h2>Авиабилеты в Ижевск</h2>
+			<p>Авиасейлс сравнивает цены на авиабилеты в Москву и обратно по 728 авиакомпаниям и сотням мировых тревелсайтов. Мы находим самые дешевые билеты на самолет в Москву без наценки и комиссии.
+			<p>Наибольшей популярностью билеты в Ижевск пользуются в июле, августе и сентябре. Низким сезоном для покупки билетов является Февраль, Март и Апрель...<a href=""> Читать дальше</a></div>
+		<h3>В Казань</h3>
+		<div>
+			<h2>Авиабилеты в Казань</h2>
+			<p>Авиасейлс сравнивает цены на авиабилеты в Казань и обратно по 728 авиакомпаниям и сотням мировых тревелсайтов. Мы находим самые дешевые билеты на самолет в Казань без наценки и комиссии.
+			<p>Наибольшей популярностью билеты в Казань пользуются в июле, августе и сентябре. Низким сезоном для покупки билетов является Февраль, Март и Апрель...<a href=""> Читать дальше</a></div>
+	    </div>
+	</div>
+<button class="btn" id="open" >Купить билет!</button>
+		<br>
+		<div id="dialog" class="dialog" title="Купить билет">
+		<form class="form-outline">
+		<div class="form-group">
+		<label >ФИО</label><br>
+		<input type="text" name="name" id="name" placeholder="Иванов Иван Иванович">
+		<p>
+
+		<label for="weight">Выберите место:</label><br>
+		<input type="text" name="weight" id="weight">
+		<p>
+		<div id="slider"></div>
+		<p>
+
+		<label for="meat">Класс:</label><br>
+		<input type="text" name="example" list="lst" id="meat" placeholder="Первый класс">
+		<datalist id="lst">
+		<option value="Первый класс">
+		<option value="Бизнес-класс">
+		<option value="Эконом-класс">
+		</datalist>
+		<p>
+
+		<label for="date">Дата поездки: </label><br>
+		<input type="text" class="form-control" id="date" placeholder="01.02.2023">
+		<p>
+		    
+		<label for="town">Введите город отправления:</label><br>
+		<input type="text" list="lst3"  class="form-control" id="town" placeholder="Томбов">
+		<datalist id="lst3">
+		<option value="Москва">
+		<option value="Санкт-Петербург">
+		<option value="Уфа">
+		<option value="Самара">
+		<option value="Ижевск">
+		<option value="Казань">
+		</datalist>
+		<p>
+
+		<label for="street">Введите конечный город следования:</label><br>
+		<input type="text" list="lst2" id="street" placeholder="Магадан">
+		<datalist id="lst2">
+		<option value="Москва">
+		<option value="Санкт-Петербург">
+		<option value="Уфа">
+		<option value="Самара">
+		<option value="Ижевск">
+		<option value="Казань">
+		</datalist>
+		<p>
+
+		<input type="text" id="promocod" placeholder="Промокод авиасеилс">
+		<p>
+		<h4>Итог<input type="text" id = "result" style = "ui-textfield" value="5000" readonly>
+		</div>
+		</form>
+		</div>
+		
+		</div>
+	</div>
+</main>
+
+	<div id="confirm" class="confirm" title="Уведомление" style="display: none;"><h2>Ваш заказ принят в обработку.</h2></div>
+</body>
+</html>
