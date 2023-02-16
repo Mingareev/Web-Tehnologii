@@ -1,0 +1,89 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+<title>Новости города</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div  id="header">
+    <ul  class="pages">
+      <li><a href="feedback.html">Отзывы о нашем портале</a></li>
+    </ul>
+   
+    <div class="break"></div>
+    <div align="center" class="logo">
+        
+        <a href="#"><img width="100" height="100" src="logo.png" />
+      <h1>Свежие новости</a></h1>
+      <p>Всегда в теме</p>
+    </div>
+    
+     
+  </div>
+  <br />
+  <div id="content">
+    <div class="recent">
+    </div>
+		<input type="button" id="getUser" value="Показать еще"/>
+  </div>
+  <div id="sidebar">
+    <div class="box">
+      <ul class="bookmarks">
+        <li class="twt"><a href="#">Твиттере</a></li>
+        <li class="fcb"><a href="#">ВКонтакте</a></li>
+        </ul>
+    </div>
+    <div class="box">
+      <h2>Популярные посты</h2>
+      <ul class="popular">
+        <li> <a href="#">США пытаются скрыть техногенную катастрофу</a>
+          <p>сравнимую по масштабам с аварией на Чернобыльской АЭС...</p>
+        </li>
+        <li> <a href="#">Журналистку отправили в колонию на шесть лет за пост в соцсетях</a>
+          <p>Марина утверждает...</p>
+        </li>        
+        <li> <a href="#">Заслуженный деятель искусств Башкортостана предложила создать архитектурно-скульптурный ансамбль в память о Муртазе Рахимове</a>
+          <p>заявляют что...</p>
+        </li>
+      </ul>
+    </div>
+    <div class="box">
+      <h2>Фотографии</h2>
+      <div class="flickr"> <a href="#"><img src="images/s1200.jpg" alt="" /></a> </div>
+    </div>
+    <div class="box">
+      <h2>Видео</h2>
+      <div class="video"> <img src="images/_video.jpg" alt="" /> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#getUser').on('click',function(){
+		var tek = $('.post').length+1;
+		var kol = 5;
+        $.ajax({
+            type:'POST',
+            url:'getData.php',
+            dataType: "json",
+            data:{tek:tek, kol:kol},
+            success:function(data){
+			    for (var i=0;i<5;i++){
+					$('.recent').append('<div class="post"> <a href="#"><img src="'+data[i].imagesource+
+						'" width="100" height="100" alt="" /></a><h2><a href="#">'+data[i].headline+
+						'</a></h2><p class="readmore">[ <a href="#">Узнать больше</a> ]</p><div class="break"></div></div>');
+			    }
+            }
+        });
+    });
+	$('#getUser').click();
+});
+</script>
